@@ -12,6 +12,8 @@
 --[[
 	Cake Anti-Cheat (CAC)
 	Prevent it from loading until an actual bypass is made.
+	http://pastebin.com/cGzqzY5B
+	http://pastebin.com/1AB3KXJf
 --]]
 
 if (string.find(string.lower(_SOURCE), "lua/includes/extentions/client/vehicle.lua")) then	
@@ -44,6 +46,7 @@ end
 
 --[[ 
 	Daz Anti-Cheat (DAC)
+	http://pastebin.com/BfKAZBgF
 --]]
 
 if (source:find("cl_dazanticheat.lua")) then
@@ -203,6 +206,7 @@ end
 
 --[[ 
 	Quack Anti-Cheat (QAC)
+	https://github.com/zerothefallen/Quack-Anti-Cheat
 --]]
 
 if (source:find("cl_qac.lua")) then
@@ -252,6 +256,8 @@ end
 
 --[[
 	Tyler's Anti-Cheat (TAC)
+	http://pastebin.com/k2PpyutX
+	http://pastebin.com/pwiBjyNw
 --]]
 
 if (source:find("cl_blunderbuss.lua")) then
@@ -273,6 +279,15 @@ end
 --]]
 
 if (source:find("cl_vbac.lua")) then
+	return false
+end
+
+--[[
+	Simple Anti-cheat by fr1kin
+	http://pastebin.com/9swrc73X
+--]]
+
+if (script:find("Anticheat") and script:find("Anticheat.Override") and script:find("Anticheat.Basic")) then
 	return false
 end
 
