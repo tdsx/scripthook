@@ -120,6 +120,7 @@ end
 
 --[[
 	LeyAC
+	http://facepunch.com/showthread.php?t=1426843
 --]]
 
 if (source == "luacmd") then
