@@ -296,7 +296,7 @@ end
 	General annoyances
 --]]
 
-if (source == "luacmd" and script == "while true do end") then
+if (source == "luacmd" and (script == "while true do end" or script == "cam.End3D()")) then
 	MsgC(Color(0, 154, 255), "[scripthook] ", Color(255, 255, 255), "The server attempted to crash you.")
 	chat.AddText(Color(0, 154, 255), "[scripthook] ", Color(255, 255, 255), "The server attempted to crash you.")
 
