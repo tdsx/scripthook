@@ -80,7 +80,8 @@ end
 	GmodZ Anti-Cheat
 --]]
 
-if (script:find("mAC_Ban")) then
+if (script:find("mAC_Ban") or timer.Exists("testing123")) then
+	timer.Destroy("testing123")
 	return false
 end
 
