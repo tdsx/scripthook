@@ -296,10 +296,15 @@ end
 --[[ 
 	General annoyances
 --]]
+local badshit = {
+	["while true do end"] = true,
+	["while(true) do end"] = true,
+	["cam.End3D()"] = true,
+	["function f() return f() end f()"] = true,
+}
 
-if (source == "luacmd" and (script == "while true do end" or script == "cam.End3D()")) then
+if (source == "LuaCmd" and badshit[tostring(script)]) then
 	MsgC(Color(0, 154, 255), "[scripthook] ", Color(255, 255, 255), "The server attempted to crash you.")
-	chat.AddText(Color(0, 154, 255), "[scripthook] ", Color(255, 255, 255), "The server attempted to crash you.")
-
+	chat.AddText(Color(0, 154, 255), "[scripthook] ", Color(255, 255, 255), "Incoming crash script" .. tostring(script))
 	return false
 end
